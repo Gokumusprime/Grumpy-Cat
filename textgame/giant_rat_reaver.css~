@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+
+div {
+	border: 1px solid #000000;
+}
+
+#masthead {
+	
+}
+
+#logo {
+	
+}
+
+#title {
+	
+}
+
+#nav {
+	
+}
+
+#sidenav {
+	
+}
+
+#enemy_window {
+	
+}
+
+#hero_text {
+	
+}
+
+#enemy_text {
+	
+}
+
