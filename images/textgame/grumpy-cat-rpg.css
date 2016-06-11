@@ -1,0 +1,40 @@
+/* grumpy-cat-rpg.css *** Styles for the Grumpy Cat RPG text game. */
+
+form input {
+	margin-bottom: .5em;
+}
+
+.rat_box {
+	float: right;
+}
+
+.enhancements b div {
+	float: left;
+	clear: both;
+}
+
+.status .players img {
+	width: 100px;
+	height: 100px;
+}
+
+.message-box {
+	float: left;
+	clear: both;
+}
+
+@media (max-width: 767px) {
+
+.rat_box {
+	clear: both;
+	float: left;
+	margin-top: 10px;
+}
+
+form  input {
+	float: left;
+	clear: both;
+}
+	
+}
+

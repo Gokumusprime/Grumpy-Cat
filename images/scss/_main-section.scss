@@ -1,0 +1,150 @@
+/* _main-section.scss *** Styles for the main section of the page as well as universal styles. */
+
+body {
+	font-family: $font-list;
+	margin: 0;
+	color: $font-primary-color;
+	background-color: $primary-background;
+	font-size: 100%;
+	@include links($font-primary-color, $font-primary-color, $font-primary-color, $font-primary-color)
+	
+	.center {
+		text-align: center;
+	}
+	
+	.clearer {
+		clear: both;
+	}
+	
+	.grid {
+		margin-left: 10%;
+		margin-right: 10%;
+		padding: 1em 0 1em 1em;
+	}
+	
+	.width-4-col {
+		width: 22%;
+		display: inline-block;
+	}
+	
+	.width-5-col {
+		width: 20%;
+		display: inline-block;
+	}
+	
+	.content-spacer {
+		margin-top: 3em;
+		margin-bottom: 3em;
+	}
+	
+	.overlay {
+		background-color: $secondary-background;
+		opacity: .5;
+		position: absolute;
+		width: 100%;
+		height: 98%;
+		top: 0;
+		left: 0;
+		
+		&:hover {
+			opacity: 0;
+		}
+	}
+	
+	.main-section {
+		.content-images {
+			width: 100%;
+			
+			.image-holder {
+				position: relative;
+				text-align: center;
+				margin-left: .5%;
+				margin-right: .5%;
+				@extend .image-holder-resizer;
+				
+				p {
+					position: absolute;
+					margin-top: 40%;
+					width: 100%;
+					color: $font-primary-white;
+					z-index: 2;
+				}
+				
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+		.news-content {
+			clear: both;
+			
+			.news-article-holder {
+				width: 100%;
+				margin-top: 1em;
+				margin-bottom: 1em;
+				
+				.news-image {
+					width: 20%;
+					margin-right: 5%;
+					float: left;
+					display: inline-block;
+					
+					img {
+						width: 100%;
+						height: auto;
+					}
+				}
+				
+				.news-content {
+					width: 75%;
+					display: inline-block;
+					float: left;
+					clear: right;
+					
+					h3 {
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+	
+}
+
+@media screen and (max-width: 767px) {
+	body {
+		.overlay {
+			height: 97%;
+		}
+		
+		.width-5-col {
+			width: 100%;
+			margin-top: 1em;
+			margin-bottom: 1em;
+			float: left;
+		}
+		
+		.image-holder-resizer {
+			width: 55%;
+		}
+		
+		.main-section {
+			.news-content {
+				
+				.news-article-holder {
+					float: left;
+					
+					.news-image{
+						width: 55%;
+						margin-top: .5em;
+						margin-bottom: .5em;
+					}
+					.news-content {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
