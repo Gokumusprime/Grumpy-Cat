@@ -1,0 +1,47 @@
+/* _footer.scss *** Styles for the footer section of the page. */
+
+body {
+	.footer {
+		background-color: $secondary-background;
+		color: $font-primary-white;
+		
+		.footer-holder {
+			.sub-menu {
+				padding-left: .5em;
+				padding-right: .5em;
+				
+				ul {
+					display: flex;
+					flex-wrap: wrap;
+					
+					li {
+						flex: 1 0 100%;
+					}
+				}
+			}
+		}
+		
+		a {
+			color: $font-primary-white;
+			text-decoration: none;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	body {
+		.footer {
+			.footer-holder {
+				.sub-menu {
+					width: 100%;
+					
+					ul {
+						li {
+							flex: 2 0 50%;
+						}
+					}
+				}
+			}
+		}
+	}
+}

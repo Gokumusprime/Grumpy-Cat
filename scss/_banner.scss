@@ -1,0 +1,79 @@
+/* _banner.scss *** Styles for the banner section of the page. */
+
+body {
+	.banner {
+		clear: both;
+		background-color: $primary-background;
+		height: 450px;
+		
+		.banner-container {
+			position: relative;
+			
+			.banner-text {
+				position: absolute;
+				top: 5%;
+				left: 11%;
+					
+				h1 {
+					@include headline($font-primary-white, 2.5em, bold);
+				}
+			}
+		}
+		
+		.banner-overlay {
+			width: 100%;
+			height: 100%;
+			background-image: url("../../images/banner.png");
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	body {
+		.banner {
+			height: 350px;
+			
+			.banner-container {
+				.banner-text {
+					h1 {
+						@include headline($font-primary-white, 2em, bold);
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	body {
+		.banner {
+			height: 280px;
+			
+			.banner-container {
+				.banner-text {
+					h1 {
+						@include headline($font-primary-white, 1.5em, bold);
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 543px) {
+	body {
+		.banner {
+			height: 175px;
+			
+			.banner-container {
+				.banner-text {
+					h1 {
+						@include headline($font-primary-white, 1em, bold);
+					}
+				}
+			}
+		}
+	}
+}
