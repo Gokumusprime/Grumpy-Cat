@@ -36,12 +36,20 @@ body {
 					width: 100%;
 					
 					ul {
+						list-style: none;
+						padding-left: 0;
+						
 						li {
 							flex: 2 0 50%;
+							@extend .footer-list-item-shaper;
 						}
 					}
 				}
 			}
+		}
+		.footer-list-item-shaper {
+			margin-top: .3em;
+			margin-bottom: .3em;
 		}
 	}
 }
