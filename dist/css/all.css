@@ -1,0 +1,243 @@
+/* all.scss ***  Compiles partials into one file */
+/* _variables.scss *** Variables for the whole site. */
+/* Colors */
+/* _mixins.scss *** Mixins for the whole site. */
+/* Mixins */
+/* _nav.scss *** Styles for the nav section of the page. */
+body .nav.grid {
+  padding-top: 0;
+  padding-bottom: 0; }
+
+body .nav .nav-title {
+  float: left;
+  display: inline-block;
+  line-height: 3em; }
+  body .nav .nav-title h2 {
+    color: #000000;
+    font-size: 1.5em;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0; }
+
+body .nav .mobile-nav {
+  float: right;
+  display: none;
+  line-height: 3em;
+  margin-top: .2em; }
+  body .nav .mobile-nav:before {
+    content: "\f0c9";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: #454545;
+    font-size: 3em; }
+
+body .nav .nav-links {
+  float: right;
+  line-height: 3em; }
+  body .nav .nav-links .nav-list {
+    list-style-type: none;
+    overflow: hidden;
+    margin-bottom: 0;
+    margin-top: 0; }
+    body .nav .nav-links .nav-list li {
+      float: left; }
+      body .nav .nav-links .nav-list li a {
+        text-decoration: none;
+        display: block;
+        padding-left: .5em;
+        padding-right: .5em; }
+        body .nav .nav-links .nav-list li a:hover {
+          color: #ffffff;
+          background-color: #454545;
+          opacity: .2; }
+
+@media screen and (min-width: 768px) {
+  body .nav .nav-links {
+    display: inline-block !important; } }
+
+@media screen and (max-width: 767px) {
+  body .nav .mobile-nav {
+    display: inline-block; }
+  body .nav .nav-links {
+    display: none;
+    clear: both;
+    float: none;
+    margin-bottom: 1em; }
+    body .nav .nav-links .nav-list {
+      padding-left: 0; }
+      body .nav .nav-links .nav-list li {
+        float: none; }
+        body .nav .nav-links .nav-list li a {
+          padding-left: 0;
+          padding-right: 0; }
+          body .nav .nav-links .nav-list li a:hover {
+            transition-property: transform;
+            transition: padding-left 1s ease-in-out;
+            padding-left: 45%; } }
+
+/* _banner.scss *** Styles for the banner section of the page. */
+body .banner {
+  clear: both;
+  background-color: #ffffff;
+  height: 450px; }
+  body .banner .banner-container {
+    position: relative; }
+    body .banner .banner-container .banner-text {
+      position: absolute;
+      top: 5%;
+      left: 11%; }
+      body .banner .banner-container .banner-text h1 {
+        color: #ffffff;
+        font-size: 2.5em;
+        font-weight: bold; }
+  body .banner .banner-overlay {
+    width: 100%;
+    height: 100%;
+    background-image: url("../../images/banner.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat; }
+
+@media screen and (max-width: 991px) {
+  body .banner {
+    height: 350px; }
+    body .banner .banner-container .banner-text h1 {
+      color: #ffffff;
+      font-size: 2em;
+      font-weight: bold; } }
+
+@media screen and (max-width: 767px) {
+  body .banner {
+    height: 280px; }
+    body .banner .banner-container .banner-text h1 {
+      color: #ffffff;
+      font-size: 1.5em;
+      font-weight: bold; } }
+
+@media screen and (max-width: 543px) {
+  body .banner {
+    height: 175px; }
+    body .banner .banner-container .banner-text h1 {
+      color: #ffffff;
+      font-size: 1em;
+      font-weight: bold; } }
+
+/* _main-section.scss *** Styles for the main section of the page as well as universal styles. */
+body {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  margin: 0;
+  color: #454545;
+  background-color: #ffffff;
+  font-size: 100%; }
+  body a {
+    color: #454545; }
+    body a:hover {
+      color: #454545; }
+    body a:active {
+      color: #454545; }
+    body a:visited {
+      color: #454545; }
+  body .center {
+    text-align: center; }
+  body .clearer {
+    clear: both; }
+  body .grid {
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 1em 0 1em 1em; }
+  body .width-4-col {
+    width: 22%;
+    display: inline-block; }
+  body .width-5-col {
+    width: 20%;
+    display: inline-block; }
+  body .content-spacer {
+    margin-top: 3em;
+    margin-bottom: 3em; }
+  body .overlay {
+    background-color: #5a5b55;
+    opacity: .5;
+    position: absolute;
+    width: 100%;
+    height: 98%;
+    top: 0;
+    left: 0; }
+    body .overlay:hover {
+      opacity: 0; }
+  body .main-section .content-images {
+    width: 100%; }
+    body .main-section .content-images .image-holder {
+      position: relative;
+      text-align: center;
+      margin-left: .5%;
+      margin-right: .5%; }
+      body .main-section .content-images .image-holder p {
+        position: absolute;
+        margin-top: 40%;
+        width: 100%;
+        color: #ffffff;
+        z-index: 2; }
+      body .main-section .content-images .image-holder img {
+        width: 100%;
+        height: auto; }
+  body .main-section .news-content {
+    clear: both; }
+    body .main-section .news-content .news-article-holder {
+      width: 100%;
+      margin-top: 1em;
+      margin-bottom: 1em; }
+      body .main-section .news-content .news-article-holder .news-image {
+        width: 20%;
+        margin-right: 5%;
+        float: left;
+        display: inline-block; }
+        body .main-section .news-content .news-article-holder .news-image img {
+          width: 100%;
+          height: auto; }
+      body .main-section .news-content .news-article-holder .news-content {
+        width: 75%;
+        display: inline-block;
+        float: left;
+        clear: right; }
+        body .main-section .news-content .news-article-holder .news-content h3 {
+          margin: 0; }
+
+@media screen and (max-width: 767px) {
+  body .overlay {
+    height: 99%; }
+  body .width-5-col {
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    float: left; }
+  body .main-section .news-content .news-article-holder {
+    float: left; }
+    body .main-section .news-content .news-article-holder .news-image {
+      width: 100%;
+      margin-top: .5em;
+      margin-bottom: .5em; }
+    body .main-section .news-content .news-article-holder .news-content {
+      width: 100%; } }
+
+/* _footer.scss *** Styles for the footer section of the page. */
+body .footer {
+  background-color: #5a5b55;
+  color: #ffffff; }
+  body .footer .footer-holder .sub-menu {
+    padding-left: .5em;
+    padding-right: .5em; }
+    body .footer .footer-holder .sub-menu ul {
+      display: flex;
+      flex-wrap: wrap; }
+      body .footer .footer-holder .sub-menu ul li {
+        flex: 1 0 100%; }
+  body .footer a {
+    color: #ffffff;
+    text-decoration: none; }
+
+@media screen and (max-width: 767px) {
+  body .footer .footer-holder .sub-menu {
+    width: 100%; }
+    body .footer .footer-holder .sub-menu ul li {
+      flex: 2 0 50%; } }

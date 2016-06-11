@@ -1,0 +1,26 @@
+/* _mixins.scss *** Mixins for the whole site. */
+
+/* Mixins */
+
+@mixin links($link, $hover, $active, $visited) {
+  a {
+	color: $link;
+	
+		&:hover {
+			color: $hover;
+		}
+	
+		&:active {
+			color: $active;
+		}
+		&:visited {
+			color: $visited;
+		}
+	}
+}
+
+@mixin headline($head-color, $head-size, $head-weight) {
+	color: $head-color;
+	font-size: $head-size;
+	font-weight: $head-weight;
+}
