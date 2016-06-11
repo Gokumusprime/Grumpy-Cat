@@ -15,7 +15,7 @@ body {
 				left: 11%;
 					
 				h1 {
-					@include headline($font-primary-white, 2.5em, bold);
+					@extend .banner-style;
 				}
 			}
 		}
@@ -28,6 +28,10 @@ body {
 			background-repeat: no-repeat;
 		}
 	}
+	
+	.banner-style {
+		@include headline($font-primary-white, 2.5em, bold);
+	}
 }
 
 @media screen and (max-width: 991px) {
@@ -35,15 +39,13 @@ body {
 		.banner {
 			height: 350px;
 			
-			.banner-container {
-				.banner-text {
-					h1 {
-						@include headline($font-primary-white, 2em, bold);
-					}
-				}
-			}
+		}
+		
+		.banner-style {
+			@include headline($font-primary-white, 2em, bold);
 		}
 	}
+	
 }
 
 @media screen and (max-width: 767px) {
@@ -51,13 +53,10 @@ body {
 		.banner {
 			height: 280px;
 			
-			.banner-container {
-				.banner-text {
-					h1 {
-						@include headline($font-primary-white, 1.5em, bold);
-					}
-				}
-			}
+		}
+		
+		.banner-style {
+			@include headline($font-primary-white, 1.5em, bold);
 		}
 	}
 }
@@ -66,14 +65,6 @@ body {
 	body {
 		.banner {
 			height: 175px;
-			
-			.banner-container {
-				.banner-text {
-					h1 {
-						@include headline($font-primary-white, 1em, bold);
-					}
-				}
-			}
 		}
 	}
 }

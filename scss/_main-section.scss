@@ -60,6 +60,7 @@ body {
 				text-align: center;
 				margin-left: .5%;
 				margin-right: .5%;
+				@extend .image-holder-resizer;
 				
 				p {
 					position: absolute;
@@ -114,7 +115,7 @@ body {
 @media screen and (max-width: 767px) {
 	body {
 		.overlay {
-			height: 99%;
+			height: 97%;
 		}
 		
 		.width-5-col {
@@ -124,6 +125,10 @@ body {
 			float: left;
 		}
 		
+		.image-holder-resizer {
+			width: 55%;
+		}
+		
 		.main-section {
 			.news-content {
 				
@@ -131,7 +136,7 @@ body {
 					float: left;
 					
 					.news-image{
-						width: 100%;
+						width: 55%;
 						margin-top: .5em;
 						margin-bottom: .5em;
 					}

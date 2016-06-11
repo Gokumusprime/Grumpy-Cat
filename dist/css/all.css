@@ -88,10 +88,6 @@ body .banner {
       position: absolute;
       top: 5%;
       left: 11%; }
-      body .banner .banner-container .banner-text h1 {
-        color: #ffffff;
-        font-size: 2.5em;
-        font-weight: bold; }
   body .banner .banner-overlay {
     width: 100%;
     height: 100%;
@@ -99,29 +95,30 @@ body .banner {
     background-size: 100% 100%;
     background-repeat: no-repeat; }
 
+body .banner-style, body .banner .banner-container .banner-text h1 {
+  color: #ffffff;
+  font-size: 2.5em;
+  font-weight: bold; }
+
 @media screen and (max-width: 991px) {
   body .banner {
     height: 350px; }
-    body .banner .banner-container .banner-text h1 {
-      color: #ffffff;
-      font-size: 2em;
-      font-weight: bold; } }
+  body .banner-style, body .banner .banner-container .banner-text h1 {
+    color: #ffffff;
+    font-size: 2em;
+    font-weight: bold; } }
 
 @media screen and (max-width: 767px) {
   body .banner {
     height: 280px; }
-    body .banner .banner-container .banner-text h1 {
-      color: #ffffff;
-      font-size: 1.5em;
-      font-weight: bold; } }
+  body .banner-style, body .banner .banner-container .banner-text h1 {
+    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: bold; } }
 
 @media screen and (max-width: 543px) {
   body .banner {
-    height: 175px; }
-    body .banner .banner-container .banner-text h1 {
-      color: #ffffff;
-      font-size: 1em;
-      font-weight: bold; } }
+    height: 175px; } }
 
 /* _main-section.scss *** Styles for the main section of the page as well as universal styles. */
 body {
@@ -205,16 +202,18 @@ body {
 
 @media screen and (max-width: 767px) {
   body .overlay {
-    height: 99%; }
+    height: 97%; }
   body .width-5-col {
     width: 100%;
     margin-top: 1em;
     margin-bottom: 1em;
     float: left; }
+  body .image-holder-resizer, body .main-section .content-images .image-holder {
+    width: 55%; }
   body .main-section .news-content .news-article-holder {
     float: left; }
     body .main-section .news-content .news-article-holder .news-image {
-      width: 100%;
+      width: 55%;
       margin-top: .5em;
       margin-bottom: .5em; }
     body .main-section .news-content .news-article-holder .news-content {
@@ -239,5 +238,11 @@ body .footer {
 @media screen and (max-width: 767px) {
   body .footer .footer-holder .sub-menu {
     width: 100%; }
-    body .footer .footer-holder .sub-menu ul li {
-      flex: 2 0 50%; } }
+    body .footer .footer-holder .sub-menu ul {
+      list-style: none;
+      padding-left: 0; }
+      body .footer .footer-holder .sub-menu ul li {
+        flex: 2 0 50%; }
+  body .footer-list-item-shaper, body .footer .footer-holder .sub-menu ul li {
+    margin-top: .3em;
+    margin-bottom: .3em; } }
